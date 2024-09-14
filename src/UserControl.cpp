@@ -1,5 +1,6 @@
 #include "Include.cpp"
 #include "UserControl.h"
+#include "LemLibConfig.cpp"
 
 // Function for driving on "Right Stick"
 void Drive() {

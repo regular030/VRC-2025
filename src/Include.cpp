@@ -7,3 +7,4 @@
 #include "pros/motors.hpp" // IWYU pragma: keep
 #include "Ports.h"
 #include "UserControl.h" // IWYU pragma: keep
+#include "LemLibConfig.h" // IWYU pragma: keep

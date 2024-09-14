@@ -1,4 +1,5 @@
 #include "Ports.h"
+#include "pros/imu.hpp"
 
 //not used
 pros::Motor DriveLF(13);
@@ -12,5 +13,7 @@ pros::MotorGroup rightDrive({-16, -12});
 
 pros::Motor Intake(14);
 pros::Motor Snapper(11);
+
+pros::Imu imu(10);
 
 pros::Controller Controller(pros::E_CONTROLLER_MASTER);
