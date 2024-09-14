@@ -1,5 +1,5 @@
 #include "main.h"
-#include "UserControl.h"
+#include "UserControl.h"  // IWYU pragma: keep
 
 
 void initialize() {

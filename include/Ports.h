@@ -1,9 +1,4 @@
-#include "lemlib/api.hpp"
-#include "main.h"
-#include "pros/abstract_motor.hpp"
-#include "pros/gps.h"
 #include "pros/motor_group.hpp"
-#include "pros/motors.h"
 #include "pros/motors.hpp"
 
 // Ports.h

@@ -1,5 +1,5 @@
 #include "Ports.h"
-#include "pros/gps.h"
+
 //not used
 pros::Motor DriveLF(13);
 pros::Motor DriveLB(17);

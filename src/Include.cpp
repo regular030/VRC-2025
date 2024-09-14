@@ -1,9 +1,9 @@
-#include "lemlib/api.hpp"
-#include "main.h"
-#include "pros/abstract_motor.hpp"
-#include "pros/gps.h"
-#include "pros/motor_group.hpp"
-#include "pros/motors.h"
-#include "pros/motors.hpp"
+#include "lemlib/api.hpp" // IWYU pragma: keep
+#include "main.h" // IWYU pragma: keep
+#include "pros/abstract_motor.hpp" // IWYU pragma: keep
+#include "pros/gps.h" // IWYU pragma: keep
+#include "pros/motor_group.hpp" // IWYU pragma: keep
+#include "pros/motors.h" // IWYU pragma: keep
+#include "pros/motors.hpp" // IWYU pragma: keep
 #include "Ports.h"
-#include "UserControl.h"
+#include "UserControl.h" // IWYU pragma: keep
