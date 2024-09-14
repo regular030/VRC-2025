@@ -1,6 +1,6 @@
 #include "Include.cpp"
-#include "lemlib/chassis/trackingWheel.hpp"
 #include "LemLibConfig.h"
+#include "lemlib/chassis/trackingWheel.hpp"
 
 //NOT USED DO NOT REMOVE
 pros::Rotation horizontal_encoder(20);

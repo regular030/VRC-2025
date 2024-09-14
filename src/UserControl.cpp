@@ -1,14 +1,13 @@
 #include "Include.cpp"
 #include "UserControl.h"
-#include "LemLibConfig.cpp"
 
 // Function for driving on "Right Stick"
 void Drive() {
-  // Get R stick axis
-  int forward = Controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_X); // Forward/backward on the right stick
-  int turn = Controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_Y); // Turning on the right stick
+  // Get L stick axis
+  int forward = Controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_X); // Forward/backward on the right stick
+  int turn = Controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y); // Turning on the right stick
 
-  // Calculate motor speeds for arcade drive
+  // Calculate motor speeds for arcade driv
   int leftSpeed = forward - turn;
   int rightSpeed = forward + turn;
 
@@ -23,11 +22,9 @@ void Drive() {
 void Snapperr() {
   if (Controller.get_digital(pros::E_CONTROLLER_DIGITAL_A)) { // Move Snapper motor forward
     Snapper.move_velocity(200);
-  } 
-  else if (Controller.get_digital(pros::E_CONTROLLER_DIGITAL_Y)) { // Move Snapper motor backwords
-    Snapper.move_velocity(200);
-  } 
-  else{ // Stop the snapper
+  } else if (Controller.get_digital(pros::E_CONTROLLER_DIGITAL_Y)) { // Move Snapper motor backwords
+    Snapper.move_velocity(-200);
+  } else{ // Stop the snapper
     Snapper.move_velocity(0); 
   }
 }
