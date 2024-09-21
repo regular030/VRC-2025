@@ -1,19 +1,14 @@
 #include "Include.cpp"
 #include "UserControl.h"
 
-// Function for driving on "Right Stick"
+// Function for driving on "Left Stick"
 void Drive() {
-  // Get L stick axis
-  int forward = Controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_X); // Forward/backward on the right stick
-  int turn = Controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y); // Turning on the right stick
+  // get left y and right x positions
+  int leftY = -1*Controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
+  int leftX = Controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_X);
 
-  // Calculate motor speeds for arcade driv
-  int leftSpeed = forward - turn;
-  int rightSpeed = forward + turn;
-
-  // Set motor speeds
-  leftDrive.move(leftSpeed);
-  rightDrive.move(rightSpeed);
+  // move the robot
+  chassis.arcade(leftX, leftY);
 }
 
 /* 
@@ -32,9 +27,9 @@ void Snapperr() {
 // Function for intake motor control on "R1" (intake) and "R2" (outtake)
 void Intaking() {
   if (Controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
-    Intake.move_velocity(150); // Forward
+    Intake.move_velocity(30); // Forward
   } else if (Controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
-    Intake.move_velocity(-150); // Backward
+    Intake.move_velocity(-30); // Backward
   } else {
     Intake.move_velocity(0); // Stop
   }

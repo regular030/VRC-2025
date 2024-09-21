@@ -1,5 +1,5 @@
 #include "Include.cpp"
-
+#include "AwpRedLeft.cpp"
 void initialize() {
     pros::lcd::initialize(); // initialize brain screen
     chassis.calibrate(); // calibrate sensors
@@ -20,4 +20,6 @@ void disabled() {}
 
 void competition_initialize() {}
 
-void autonomous() {}
+void autonomous() {
+    chassis.moveToPoint(10, 0, 4000);
+}
