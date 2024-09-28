@@ -4,7 +4,7 @@
 // Function for driving on "Left Stick"
 void Drive() {
   // get left y and right x positions
-  int leftY = -1*Controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
+  int leftY = Controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
   int leftX = Controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_X);
 
   // move the robot
@@ -63,6 +63,7 @@ void opcontrol() {
 
   // Main control loop to keep tasks running
   while (true) {
+    
     pros::delay(100); // Main loop delay
   }
 }

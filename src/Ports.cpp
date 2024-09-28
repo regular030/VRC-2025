@@ -8,12 +8,12 @@ pros::Motor DriveRF(16);
 pros::Motor DriveRB(12);
 
 //used
-pros::MotorGroup leftDrive({-13, -15});
-pros::MotorGroup rightDrive({-20, -19});
+pros::MotorGroup rightDrive({-13, -15});
+pros::MotorGroup leftDrive({-20, -19});
 
 pros::Motor Intake(14);
 pros::Motor Snapper(11);
 
-pros::Imu imu(10);
+pros::Imu imu(17);
 
 pros::Controller Controller(pros::E_CONTROLLER_MASTER);
