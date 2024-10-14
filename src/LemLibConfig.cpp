@@ -7,7 +7,7 @@ lemlib::Drivetrain drivetrain(&leftDrive,
                               &rightDrive,
                               13, 
                               lemlib::Omniwheel::NEW_4, 
-                              300,
+                              400,
                               2 
 );
 
