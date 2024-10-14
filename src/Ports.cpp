@@ -2,7 +2,7 @@
 #include "pros/imu.hpp"
 
 //used
-pros::MotorGroup rightDrive({-13, -15});
+pros::MotorGroup rightDrive({-18, -15});
 pros::MotorGroup leftDrive({-20, -19});
 
 pros::Motor Intake(14);
