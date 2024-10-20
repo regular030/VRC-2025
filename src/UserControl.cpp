@@ -8,7 +8,7 @@ void Drive() {
   int leftX = Controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_X);
 
   // move the robot
-  chassis.arcade(leftX, leftY);
+  chassis.arcade(leftY, leftX);
 }
 
 /* 
