@@ -1,5 +1,6 @@
 #include "Include.cpp"
-#include "AwpRedLeft.cpp"
+#include "Auto.cpp"
+
 void initialize() {
     chassis.calibrate();
     chassis.setPose(0, 0, 0);
@@ -27,15 +28,5 @@ void disabled() {}
 void competition_initialize() {}
 
 void autonomous() {
-     // set position to x:0, y:0, heading:0
-    chassis.setPose(0, 0, 0);
-    // move 48" forwards
-    chassis.moveToPoint(0, 48, 10000);
-    // turn 90 deg
-    chassis.turnToHeading(-90, 10000);
-    // move 48" forwards
-    chassis.moveToPoint(48, 48, 10000);
-    chassis.turnToHeading(-90, 10000);
-
-
+  red();
 }
