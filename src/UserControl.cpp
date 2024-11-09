@@ -1,4 +1,6 @@
 #include "Include.cpp"
+#include "pros/adi.hpp"
+#include "pros/rtos.hpp"
 #include "UserControl.h"
 
 // Function for driving on "Left Stick"
@@ -12,7 +14,7 @@ void Drive() {
 }
 
 /* 
- * Function for snapper motor control on "A" button (forwards) and "Y" button (backwards)
+ * Function for snapper motor control on "A" button (down) and "Y" button (backwards)
 */
 void Snapperr() {
   if (Controller.get_digital(pros::E_CONTROLLER_DIGITAL_A)) { // Move Snapper motor forward
@@ -63,7 +65,7 @@ void opcontrol() {
 
   // Main control loop to keep tasks running
   while (true) {
-    
     pros::delay(100); // Main loop delay
   }
 }
+

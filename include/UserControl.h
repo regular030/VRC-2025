@@ -7,5 +7,6 @@ void Drive();
 void Snapperr();
 void Intaking();
 void opcontrol();
+void SnapperHuge();
 
 #endif // USERCONTROL_H
