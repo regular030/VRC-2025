@@ -29,9 +29,11 @@ void Snapperr() {
 // Function for intake motor control on "R1" (intake) and "R2" (outtake)
 void Intaking() {
   if (Controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
-    Intake.move_velocity(600); // Forward
+    Intake.move_velocity(200); // Forward
+    Conveyer.move_velocity(600);
   } else if (Controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
-    Intake.move_velocity(-600); // Backward
+    Intake.move_velocity(-200); // Backward
+    Conveyer.move_velocity(-600);
   } else {
     Intake.move_velocity(0); // Stop
   }
