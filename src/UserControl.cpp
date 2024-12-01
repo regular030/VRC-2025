@@ -36,6 +36,7 @@ void Intaking() {
     Conveyer.move_velocity(-600);
   } else {
     Intake.move_velocity(0); // Stop
+    Conveyer.move_velocity(0);
   }
 }
 

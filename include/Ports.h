@@ -13,8 +13,8 @@ extern pros::MotorGroup leftDrive;
 extern pros::MotorGroup rightDrive;
 extern pros::ADIDigitalOut pneuSolenoid;
 extern pros::Motor Intake;
+extern pros::Motor Conveyer;
 extern pros::Controller Controller;
 extern pros::Imu imu;
-extern pros::Motor Conveyer;
 
 #endif // PORTS_H

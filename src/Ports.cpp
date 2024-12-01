@@ -6,8 +6,8 @@
 pros::MotorGroup rightDrive({18, 15}, pros::MotorGearset::green);
 pros::MotorGroup leftDrive({-20, -19}, pros::MotorGearset::green);
 
-pros::Motor Intake(14);
-pros::Motor Conveyer(11);
+pros::Motor Intake(14, pros::MotorGearset::green);
+pros::Motor Conveyer(11, pros::MotorGearset::blue);
 
 pros::ADIDigitalOut pneuSolenoid(1);
 
