@@ -13,25 +13,25 @@ void Drive() {
   chassis.arcade(leftY, leftX);
 }
 
-/* 
- * Function for snapper motor control on "A" button (down) and "Y" button (backwards)
-*/
+// Function for snapper pneumatics control with a single button toggle (A)
 void Snapperr() {
-  if (Controller.get_digital(pros::E_CONTROLLER_DIGITAL_A)) { // Move Snapper motor forward
-    Snapper.move_velocity(200);
-  } else if (Controller.get_digital(pros::E_CONTROLLER_DIGITAL_Y)) { // Move Snapper motor backwords
-    Snapper.move_velocity(-200);
-  } else{ // Stop the snapper
-    Snapper.move_velocity(0); 
+  static bool pneuExtended = false;  // Tracks the current state of the solenoid
+
+  if (Controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_A)) {
+    // Toggle the state
+    pneuExtended = !pneuExtended;
+    
+    // Set the solenoid to the new state
+    pneuSolenoid.set_value(pneuExtended);
   }
 }
 
 // Function for intake motor control on "R1" (intake) and "R2" (outtake)
 void Intaking() {
   if (Controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
-    Intake.move_velocity(200); // Forward
+    Intake.move_velocity(600); // Forward
   } else if (Controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
-    Intake.move_velocity(-200); // Backward
+    Intake.move_velocity(-600); // Backward
   } else {
     Intake.move_velocity(0); // Stop
   }
@@ -39,8 +39,6 @@ void Intaking() {
 
 // Function for operator control 
 void opcontrol() {
-  Snapper.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
-
   // Creating tasks to run each function asynchronously
   pros::Task driveTask([] {
     while (true) {

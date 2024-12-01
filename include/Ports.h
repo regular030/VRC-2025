@@ -1,4 +1,5 @@
 #include "pros/motor_group.hpp"
+#include "pros/adi.hpp"
 #include "pros/motors.hpp"
 #include "pros/imu.hpp"
 
@@ -10,11 +11,9 @@
 
 extern pros::MotorGroup leftDrive;
 extern pros::MotorGroup rightDrive;
-extern pros::Motor Snapper;
+extern pros::ADIDigitalOut pneuSolenoid;
 extern pros::Motor Intake;
 extern pros::Controller Controller;
 extern pros::Imu imu;
-
-// Add other necessary declarations here
 
 #endif // PORTS_H

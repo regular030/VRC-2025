@@ -31,27 +31,10 @@ void competition_initialize() {}
 
 void red(){
   //code not final 
-    chassis.setPose(0, 0, 0);
-    chassis.turnToHeading(180, 1000);
-    chassis.moveToPoint(0, 22, 5000, {.forwards = false});
-    Snapper.move_velocity(200);
-    pros::delay(2000);
-    Snapper.move_velocity(0);
-    Intake.move_velocity(200);
-    chassis.moveToPose(31, 27, -90, 5000);
-
 
 }
 void blue(){
   //testing....
-    chassis.setPose(0, 0, 0);
-    chassis.turnToHeading(180, 1000);
-    chassis.moveToPoint(0, 32, 5000, {.forwards = false});
-    Snapper.move_velocity(200);
-    pros::delay(2000);
-    Snapper.move_velocity(0);
-    Intake.move_velocity(200);
-    chassis.moveToPoint(24, 36, 5000);
 }
 
 // void skills(){
