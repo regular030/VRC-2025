@@ -11,6 +11,6 @@ pros::Motor Conveyer(11, pros::MotorGearset::blue);
 
 pros::ADIDigitalOut pneuSolenoid(1);
 
-pros::Imu imu(17);
+pros::Imu imu(12);
 
 pros::Controller Controller(pros::E_CONTROLLER_MASTER);
